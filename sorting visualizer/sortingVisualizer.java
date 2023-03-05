@@ -1,8 +1,4 @@
 package searchsort;
-
-
-
-
 import processing.core.* ;
 
 public class searc extends PApplet {
@@ -18,27 +14,15 @@ public class searc extends PApplet {
 	
 	public void setup(){
 	   size (width,heigth);
-	  
-	  
-	   
-	   
 	   for(int i = 0 ; i < lines.length ; i++) {
 		   lines[i] = random(heigth);
-	   }
-
-	   
-	   
+	   }	   
 	}
-	public void draw() {
-		
-		stroke(100);
-		
+	public void draw() {		
+		stroke(100);		
 		for(int i = 0 ; i < lines.length ; i++) {
 			line (i , height , i , height - lines[i]);
-		}
-
-		
-		
+		}		
 		background(255);
 		
 		 stroke(100);
@@ -57,13 +41,11 @@ public class searc extends PApplet {
 		 text("bubble sort" , 70 , 120);
 		 fill(255,0,0);
 		 
-		 
 		 rect(60,130,90,30);
 		 fill(0,0,0);
 		 text("merge sort" , 70 , 150);
 		 fill(255,0,0);
-		 
-		 
+	 
 		 rect(60,160,90,30);
 		 fill(0,0,0);
 		 text("shuffle sort" , 70 , 180);
@@ -74,17 +56,12 @@ public class searc extends PApplet {
 		 text("shuffle",70,210);
 		 fill(255,0,0);
 		 
-		 
-		 
-		
+	
 		for(int i = 0 ; i < lines.length ; i++) {
 			line (i , height , i , height - lines[i]);
 		}
-		
-
-		
+	
 		mouseReleased();
-
 	}
 	
 	@Override
@@ -94,15 +71,13 @@ public class searc extends PApplet {
 				int indexMin = i;
 				for(int j = i + 1 ; j < lines.length ; j++) {
 					if(lines[j] < lines[indexMin]) {
-						indexMin = j ;
-						
+						indexMin = j ;					
 					}
 					swap(lines , indexMin , i);
 				}
 				i++;
 			}
-			
-			
+				
 		}else if(mouseX > 60 && mouseY < 150 && mouseY > 70 && mouseY < 100) {
 			if(i < lines.length) {
 				for(int j = 0 ; j < lines.length ; j++) {
@@ -119,13 +94,9 @@ public class searc extends PApplet {
 			 
 			if(lines.length > 0) { 
 			 while(h >= 1) {   
-			         for (int i = h; i < N; i++) {
-			        	 
-			        	 
+			         for (int i = h; i < N; i++) {		        	 	        	 
 			           for (int j = i; j >= h && lines[j] < lines[j-h]; j -= h)
 			                swap(lines, j, j-h);
-			           
-			           
 			           }
 		
 			 h = h/3;
