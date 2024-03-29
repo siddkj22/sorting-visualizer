@@ -97,12 +97,9 @@ public class searc extends PApplet {
 			         for (int i = h; i < N; i++) {		        	 	        	 
 			           for (int j = i; j >= h && lines[j] < lines[j-h]; j -= h)
 			                swap(lines, j, j-h);
-			           }
-		
+				 }
 			 h = h/3;
-			 
 			 }
-			
 			}
 			
 		}else if(mouseX > 60 && mouseX < 150 && mouseY > 110 && mouseY < 160) {
@@ -140,5 +137,4 @@ public class searc extends PApplet {
 		arr[i]  = arr[j] ;
 		arr[j] = temp;
 	}
-
 }
